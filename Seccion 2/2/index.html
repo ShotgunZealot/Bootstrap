@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dos</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.2-dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.5.1-web/css/all.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-5">
+                <h2 class="text-center mb-4">Registro de Usuario</h2>
+                <form class="needs-validation" novalidate>
+                        <label for="fullName" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control mb-2" id="fullName" name="fullName"
+                            placeholder="Escribe tu nombre" required>
+                        <div class="invalid-feedback">
+                            Por favor ingrese su nombre completo.
+                        </div>
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control mb-2" id="email" name="email" placeholder="Escribe tu email"
+                            required>
+                        <div class="invalid-feedback">
+                            Por favor ingrese un correo electrónico válido.
+                        </div>
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control mb-2" id="password" name="password" minlength="6"
+                            placeholder="Escribe tu contraseña" required>
+                        <div class="invalid-feedback">
+                            La contraseña debe tener al menos 6 caracteres.
+                        </div>
+                    <div class="col-6 mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Aceptar terminos y condiciones
+                            </label>
+                            <div class="invalid-feedback">
+                                Debes aceptar para continuar
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 text-center">
+                        <button type="submit" class="btn btn-info">Registrarse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <script>
+        (() => {
+            'use strict'
+
+            const forms = document.querySelectorAll('.needs-validation')
+
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+</body>
+
+</html>

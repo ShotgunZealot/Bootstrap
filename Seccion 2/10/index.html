@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>diez</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.2-dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.5.1-web/css/all.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Titulo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Opciones
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                            <li><h6 class="dropdown-header">Secciones</h6></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#seccion1">Seccion 1</a></li>
+                            <li><a class="dropdown-item" href="#seccion2">Seccion 2</a></li>
+                            <li><a class="dropdown-item" href="#seccion3">Seccion 3</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><h6 class="dropdown-header">Cuenta</h6></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#seccion1">Iniciar sesion</a></li>
+                            <li><a class="dropdown-item" href="#seccion2">Crear cuenta</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="seccion1" style="height: 500px; background-color: lightblue; margin-top: 20px;">
+            <h2>Sección 1</h2>
+            <p>Contenido de la sección 1.</p>
+        </div>
+
+        <div id="seccion2" style="height: 500px; background-color: lightgreen; margin-top: 20px;">
+            <h2>Sección 2</h2>
+            <p>Contenido de la sección 2.</p>
+        </div>
+
+        <div id="seccion3" style="height: 500px; background-color: lightcoral; margin-top: 20px;">
+            <h2>Sección 3</h2>
+            <p>Contenido de la sección 3.</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

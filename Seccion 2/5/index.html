@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>cinco</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.2-dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.5.1-web/css/all.css">
+</head>
+
+<body class="bg-dark text-white">
+    <nav class="navbar navbar-expand-md bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Nombre</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Secciones
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#seccion1">Seccion 1</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#seccion2">Seccion 2</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#seccion3">Seccion 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <h1 class="display-3 text-center mt-2">Titulo</h1>
+            <div class="col-8 mb-5">
+                <h1 class="display-5">Subtitulo 1</h1>
+                <p>Contenido 1...</p>
+            </div>
+            <div class="col-8 mb-5">
+                <h1 class="display-5">Subtitulo 2</h1>
+                <p>Contenido 2...</p>
+            </div>
+            <div class="col-8 mb-5">
+                <h1 class="display-5">Subtitulo 3</h1>
+                <p>Contenido 3...</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h2 class="display-6">Deja tu comentario</h2>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Correo electronico</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="nombre@ejemplo.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mnesaje</label>
+                    <textarea placeholder="Escribe tu comentario" class="form-control" id="exampleFormControlTextarea1"
+                        rows="3"></textarea>
+                </div>
+                <div id="liveAlertPlaceholder"></div>
+                <button type="button" class="btn btn-primary" id="liveAlertBtn">Enviar</button>
+            </div>
+            <div class="col-6">
+                <h2 class="display-6">Descarga nuestra app!</h2>
+                <p>Descripcion de la app...</p>
+                <div class="alert alert-danger" role="alert">
+                    Ha ocurrido un error al cargar el archivo
+                </div>
+            </div>
+            <div class="col-6 mt-3">
+                <h1 class="display-6">Comentarios de usuarios</h1>
+                <div class="alert alert-warning" role="alert">
+                    Puede haber contenido explicito en los comentarios
+                </div>
+                <div class="col-4">
+                    pedrocraft@gmail.com
+                    <p class="lead">Observen esto</p>
+                    <img src="https://media.tenor.com/f4bC7-F_g-4AAAAM/jefe-chikito.gif" alt="imageuser1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+        const appendAlert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('')
+
+            alertPlaceholder.append(wrapper)
+        }
+
+        const alertTrigger = document.getElementById('liveAlertBtn')
+        if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+                appendAlert('Comentario enviado correctamente', 'success')
+            })
+        }        
+    </script>
+</body>
+
+</html>
